@@ -31,10 +31,12 @@ Created using IcoMoon - icomoon.io
 
 .font-icon-detail {
   text-align: center;
-  padding: 45px 0 30px;
+  padding: 10%;
+  padding-top: 24%;
   border: 1px solid #e44cc4;
   border-radius: .1875rem;
   margin: 15px 0;
+  max-height: 170px;
   min-height: 168px;
 }
 
