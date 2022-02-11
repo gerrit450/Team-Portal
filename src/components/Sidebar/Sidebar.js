@@ -17,14 +17,10 @@
 */
 /*eslint-disable*/
 import React from "react";
+import myob from '../../assets/img/myob icon.png';
 import { NavLink, Link, useLocation } from "react-router-dom";
-// nodejs library to set properties for components
 import { PropTypes } from "prop-types";
-
-// javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
-
-// reactstrap components
 import { Nav, NavLink as ReactstrapNavLink } from "reactstrap";
 import {
   BackgroundColorContext,
@@ -58,7 +54,6 @@ function Sidebar(props) {
     document.documentElement.classList.remove("nav-open");
   };
   const { routes, rtlActive, logo } = props;
-  console.log(routes);
   let logoImg = null;
   let logoText = null;
   if (logo !== undefined) {
@@ -69,9 +64,10 @@ function Sidebar(props) {
           className="simple-text logo-mini"
           target="_blank"
           onClick={props.toggleSidebar}
+          style={{width: '80px'}}
         >
-          <div className="logo-img">
-            <img src={logo.imgSrc} alt="react-logo" />
+          <div className="logo-img" style={{width: '80px', resize: 'stretch'}}>
+            <img src={myob} alt="myob-logo" style={{width: '150px'}}/>
           </div>
         </a>
       );
@@ -81,8 +77,9 @@ function Sidebar(props) {
           className="simple-text logo-normal"
           target="_blank"
           onClick={props.toggleSidebar}
+          style={{paddingTop: '15px'}}
         >
-          {logo.text}
+          {"Lifeline"}
         </a>
       );
     } else {
@@ -93,7 +90,7 @@ function Sidebar(props) {
           onClick={props.toggleSidebar}
         >
           <div className="logo-img">
-            <img src={logo.imgSrc} alt="react-logo" />
+            <img src={myob} alt="react-logo" style={{width: '150px'}}/>
           </div>
         </Link>
       );
@@ -144,7 +141,6 @@ function Sidebar(props) {
               <li className="active-pro">
                 <ReactstrapNavLink href="https://www.creative-tim.com/product/black-dashboard-pro-react?ref=bdr-user-archive-sidebar-upgrade-pro">
                   <i className="tim-icons icon-spaceship" />
-                  <p>Upgrade to PRO</p>
                 </ReactstrapNavLink>
               </li>
             </Nav>

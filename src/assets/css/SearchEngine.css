@@ -1,0 +1,26 @@
+
+.SearchEngine{
+    align-items: center;
+    text-align: center;
+    font-family: 'poppins bold';
+  }
+  .search{
+  }
+  
+  .news{
+  }
+  
+  .announce{
+  }
+  
+  .App-logo {
+    pointer-events: none;
+  }
+
+  .newsTable {
+      min-width: 90%;
+  }
+
+  .data:hover{
+      color: red;
+  }
